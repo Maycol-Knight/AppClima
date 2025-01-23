@@ -64,26 +64,8 @@ body{
     color: white;
     font-weight: 700;
 }
-/* .wrapperBox :nth-child(1) {
-    background-color: rgba(0, 0, 0, 0.767);
-    color: azure;
+.wrapperInput {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
-
-.wrapperBox :nth-child(2) {
-    background-color: darkslateblue;
-    color: azure;
-} */
-/* #caja1{
-    background-color: rgba(0, 0, 0, 0.767);
-    color: azure;
-} */
-
-/* #caja2{
-    background-color: darkslateblue;
-    color: azure;
-} */
-/* 
-#caja3{
-    background-color: #2ab2ea;
-    color: azure;
-} */
