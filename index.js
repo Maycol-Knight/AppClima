@@ -185,3 +185,29 @@ botonUbicacion.addEventListener('click', function() {
         })
     }
 });
+let buscar = document.querySelector('#buscarButton');
+console.log(buscar);
+buscar.addEventListener('click', function() {
+    console.log("boton buscar clickeado");
+    let ciudad = document.querySelector('#ubicacion-input').value;
+    console.log(ciudad);
+    if (ciudad) {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=5114e4f91f159a5ef014a2b969e458a8&units=metric&lang=es`;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById('temperatura-valor').innerText = `${data.main.temp} °C`;
+                document.getElementById('temperatura-descripcion').innerText = data.weather[0].description;
+                document.getElementById('ubicacion').innerText = data.name;
+                document.getElementById('viento-velocidad').innerText = `${data.wind.speed} m/s`;
+                document.getElementById('icono-animado').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+            })
+            .catch(error => {
+                console.error('Error al obtener el clima:', error);
+                alert('No se pudo obtener el clima para la ubicación ingresada.');
+            });
+    } else {
+        alert('Por favor, ingresa una ciudad.');
+    }
+});
