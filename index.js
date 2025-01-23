@@ -86,37 +86,9 @@ window.addEventListener('load',()=>{
                         iconoAnimado.src ="resources/animated/cloudy-day-1.svg"
                         console.log("Nubes")
                         break;
-
-
-                        case"Clouds":
-                        iconoAnimado.src ="resources/animated/cloudy-day-1.svg"
-                        console.log("Nubes")
-                        break;
-
-
-                        case"Clouds":
-                        iconoAnimado.src ="resources/animated/cloudy-day-1.svg"
-                        console.log("Nubes")
-                        break;
-
-
-                        case"Clouds":
-                        iconoAnimado.src ="resources/animated/cloudy-day-1.svg"
-                        console.log("Nubes")
-                        break;
-
-
-                        case"Clouds":
-                        iconoAnimado.src ="resources/animated/cloudy-day-1.svg"
-                        console.log("Nubes")
-                        break;
-
-
-                        case"Clouds":
-                        iconoAnimado.src ="resources/animated/cloudy-day-1.svg"
-                        console.log("Nubes")
-                        break;              
-
+                    default:
+                        iconoAnimado.src= "resources/animated/cloudy-day-1.svg"
+                        console.log('por defecto');
                  } 
 
            })
